@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useAuth } from '../../../hooks/useAuth';
 import SearchBar from '../../features/SearchBar/SearchBar';
-import Notifications from '../../features/Notifications/Notifications';
 import UserProfile from '../../features/UserProfile/UserProfile';
 import DarkModeToggle from '../../theme/DarkModeToggle/DarkModeToggle';
 import Logo from '../Logo/Logo.jsx';
@@ -32,8 +31,6 @@ export default function Header() {
         </div>
         
         <div className="header-actions">
-          <DarkModeToggle className="header-action-item" />
-          <Notifications className="header-action-item" />
           <UserProfile user={user} className="header-action-item" />
         </div>
       </div>
