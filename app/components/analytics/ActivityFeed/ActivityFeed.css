@@ -1,0 +1,118 @@
+/* ActivityFeed.css */
+.activity-feed {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "user timestamp"
+    "action timestamp";
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border-light);
+  transition: background-color var(--transition-fast);
+}
+
+.activity-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-user {
+  grid-area: user;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.activity-action {
+  grid-area: action;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+}
+
+.activity-timestamp {
+  grid-area: timestamp;
+  color: var(--color-text-lighter);
+  font-size: 0.8rem;
+  align-self: center;
+}
+
+.activity-feed-empty {
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-text-light);
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.show-more-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--color-bg);
+  border: none;
+  border-top: 1px solid var(--color-border-light);
+  color: var(--color-primary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.show-more-button:hover {
+  background-color: var(--color-primary-light);
+  color: white;
+}
+
+/* Animation for new items */
+.activity-item {
+  animation: fadeIn var(--duration-normal) var(--ease-out) forwards;
+}
+
+@media (max-width: 768px) {
+  .activity-item {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "user"
+      "action"
+      "timestamp";
+    gap: 0.25rem;
+  }
+  
+  .activity-timestamp {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Dark mode support */
+[data-theme="dark"] .activity-feed,
+[data-theme="dark"] .activity-feed-empty {
+  background-color: var(--color-secondary-dark);
+}
+
+[data-theme="dark"] .activity-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .show-more-button {
+  background-color: var(--color-secondary);
+}
+
+[data-theme="dark"] .show-more-button:hover {
+  background-color: var(--color-primary-dark);
+}

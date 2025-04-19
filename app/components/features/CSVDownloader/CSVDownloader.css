@@ -1,0 +1,10 @@
+.csv-download-btn {
+    margin-top: 20px;
+    padding: 10px 16px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  

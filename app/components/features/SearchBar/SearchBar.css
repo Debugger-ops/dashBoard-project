@@ -1,0 +1,72 @@
+/* SearchBar.css */
+
+/* Main container for the search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  /* Expanded state for the search bar */
+  .search-bar.expanded {
+    width: 300px;
+  }
+  
+  /* Styles for the search icon */
+  .search-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .search-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Input field styling */
+  .search-input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 8px;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  
+  /* Focused state for input */
+  .search-input:focus {
+    border-color: #007bff;
+  }
+  
+  /* Clear button (×) styling */
+  .clear-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+  }
+  
+  .clear-button:hover {
+    color: #333;
+  }
+  
+  /* Make the input field and button align properly */
+  .search-bar form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .search-bar form input {
+    flex-grow: 1;
+  }
+  

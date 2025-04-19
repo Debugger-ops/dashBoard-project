@@ -1,0 +1,10 @@
+.calendar-widget {
+    margin-top: 30px;
+    padding: 20px;
+    background: #e3f2fd;
+    border-radius: 10px;
+  }
+  .calendar-widget h3 {
+    margin-bottom: 10px;
+  }
+  
