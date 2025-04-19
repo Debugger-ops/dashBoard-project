@@ -1,0 +1,91 @@
+/* app/components/analytics/FilterDropdown/FilterDropdown.module.css */
+.filterDropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .filterButton {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    gap: 8px;
+    min-width: 130px;
+  }
+  
+  .filterButton:hover {
+    background-color: #edf2f7;
+  }
+  
+  .filterIcon {
+    font-size: 14px;
+  }
+  
+  .arrowIcon {
+    font-size: 10px;
+    margin-left: auto;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 180px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  .option {
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4a5568;
+    transition: background-color 0.2s ease;
+  }
+  
+  .option:hover {
+    background-color: #f7fafc;
+  }
+  
+  .option.selected {
+    background-color: #ebf4ff;
+    color: #3182ce;
+    font-weight: 500;
+  }
+  
+  /* Dark theme styles */
+  :global(.dark-theme) .filterButton {
+    background-color: #2d3748;
+    border-color: #4a5568;
+    color: #e2e8f0;
+  }
+  
+  :global(.dark-theme) .filterButton:hover {
+    background-color: #3a4556;
+  }
+  
+  :global(.dark-theme) .dropdown {
+    background-color: #2d3748;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  :global(.dark-theme) .option {
+    color: #e2e8f0;
+  }
+  
+  :global(.dark-theme) .option:hover {
+    background-color: #3a4556;
+  }
+  
+  :global(.dark-theme) .option.selected {
+    background-color: #2c5282;
+    color: #ebf8ff;
+  }
